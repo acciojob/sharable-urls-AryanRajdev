@@ -5,10 +5,10 @@ document.querySelector(".form").addEventListener(('submit'),(e)=>{
 	let name = document.getElementById("name").value;
 	let year = document.getElementById("year").value;
 
-	if(name === ""){
+	if(name === "" && year!==""){
 		h3El.textContent = `https://localhost:8080/?year=${year}`
 	}
-	else if(year === ""){
+	else if(year === "" && name!==""){
 		h3El.textContent = `https://localhost:8080/?name=${name}`
 	}
 	else if(name === "" && year === ""){
